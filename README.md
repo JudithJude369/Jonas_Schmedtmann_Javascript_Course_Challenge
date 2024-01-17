@@ -1,0 +1,2 @@
+# Jonas_Schmedtmann_Javascript_Course_Challenge
+Javascript challenge from Jonas_Schmedtmann_Javascript_Course
