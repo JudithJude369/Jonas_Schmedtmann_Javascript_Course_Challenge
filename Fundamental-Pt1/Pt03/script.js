@@ -1,82 +1,76 @@
-// LECTURE: Strings and Template Literals
-// 1. Recreate the 'description' variable from the last assignment, this time
-// using the template literal syntax
+// LECTURE: The switch Statement
+// 1. Use a switch statement to log the following string for the given 'language':
+// chinese or mandarin: 'MOST number of native speakers!'
+// spanish: '2nd place in number of native speakers'
+// english: '3rd place'
+// hindi: 'Number 4'
+// arabic: '5th most spoken language'
+// for all other simply log 'Great language too :D'
 
-// Based on the variables you created, create a new variable 'description'
-//  which contains a string with this format: 'Portugal is in Europe, and its 11 million
-//  people speak portuguese
+// SOLUTION
+// const language = `Chinese`
+// switch(language) {
+//     case 'Chinese':
+//     console.log('MOST number of native speakers!')
+//     break;
+//     case `spanish`:
+//     console.log('2nd place in number of native speakers')
+//     break;
+//     case `english`:
+//     console.log('3rd place')
+//     break;
+//     case `hindi`:
+//     console.log('Number 4')
+//     break;
+//     case `arabic`:
+//     console.log('5th most spoken language')
+//     break;
+//     default:
+//         console.log('Great language too :D') 
+// }
 
-// Solution
-// const country  = `Portugal`
-// const continent = `Europe`
-// const population = 11
-// const language = `Portuguese`
-// const description = `${country} is in ${continent}, and it's ${population} million people speak ${language}`
-// console.log(description)
 
-// LECTURE: Taking Decisions: if / else Statements
-// 1. If your country's population is greater that 33 million, log a string like this to the
-// console: 'Portugal's population is above average'. Otherwise, log a string like
-// 'Portugal's population is 22 million below average' (the 22 is the average of 33
-// minus the country's population)
+// LECTURE: The Conditional (Ternary) Operator
+// 1. If your country's population is greater than 33 million, use the ternary operator
+// to log a string like this to the console: 'Portugal's population is above average'.
+// Otherwise, simply log 'Portugal's population is below average'. Notice how only
+// one word changes between these two sentences!
 // 2. After checking the result, change the population temporarily to 13 and then to
 // 130. See the different results, and set the population back to original
 
-// Solution
+// SOLUTION
+// const Population = 22.2
+// const country = Population > 33 ? `Nigeria's population is above average` :
+//                                  `Nigeria's population is below average`
+// console.log(country)
 
-// const population = 22.2
-
-// if(population > 33) {
-//     console.log(`Portugal's population is above average`)
-// } else {
-//     console.log(`Portugal's population is 22 million below average`)
-// }
-
-// Coding Challenge #2
-// Mark and John are trying to compare their BMI (Body Mass Index), which is
-// calculated using the formula:
-// BMI = mass / height ** 2 = mass / (height * height) (mass in kg
-// and height in meter).
+// Coding Challenge #4
+// Steven wants to build a very simple tip calculator for whenever he goes eating in a
+// restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and
+// 300. If the value is different, the tip is 20%.
 // Your tasks:
-// 1. Store Mark's and John's mass and height in variables
-// 2. Calculate both their BMIs using the formula (you can even implement both
-// versions)
+// 1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for
+// this. It's not allowed to use an if/else statement � (If it's easier for you, you can
+// start with an if/else statement, and then try to convert it to a ternary
+// operator!)
+// 2. Print a string to the console containing the bill value, the tip, and the final value
+// (bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value
+// 316.25”
 // Test data:
-// § Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95
-// m tall.
-// § Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76
-// m tall.
-// Use the BMI example from Challenge #1, and the code you already wrote, and
-// improve it.
-// Your tasks:
-// 1. Print a nice output to the console, saying who has the higher BMI. The message
-// is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
-// 2. Use a template literal to include the BMI values in the outputs. Example: "Mark's
-// BMI (28.3) is higher than John's (23.9)!"
-// Hint: Use an if/else statement 
+// § Data 1: Test for bill values 275, 40 and 430
+// Hints:
+// § To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+// § Value X is between 50 and 300, if it's >= 50 && <= 300 �
 
-// Solution
-// const massMark = 78
-// const heightMark = 1.69
-// const massJohn = 92
-// const heightJohn = 1.95
+// SOLUTION
+// const bill = 275
+// const tip = bill >= 50 && bill <= 300 ? bill * (15/100) : bill * (20/100)
+// console.log(`The bill was ${bill} , the tip was ${tip} , and the total value ${bill + tip} `)
 
-// const massMark = 95
-// const heightMark = 1.88
-// const massJohn = 85
-// const heightJohn = 1.76
-// BODY MASS INDEX FOR JOHN AND MARK
-// const BMIMark = massMark / heightMark ** 2
-// const BMIJohn = massJohn / heightJohn ** 2
-// console.log(BMIMark, BMIJohn)
+// const bill = 40
+// const tip = bill >= 50 && bill <= 300 ? bill * (15/100) : bill * (20/100)
+// console.log(`The bill was ${bill} , the tip was ${tip} , and the total value ${bill + tip} `)
 
-let BMIMark = 26.8;;
-let BMIJohn = 27.4;;
-
-// TAKING DECISIONS
-if (BMIMark > BMIJohn) {
-    console.log(`"Mark's BMI (${BMIMark}) is higher than John's BMI (${BMIJohn})!`)
-} else {
-    console.log(`John's BMI (${BMIJohn})is higher than Mark's BMI (${BMIMark})!`)
-}
-
+// const bill = 430
+// const tip = bill >= 50 && bill <= 300 ? bill * (15/100) : bill * (20/100)
+// console.log(`The bill was ${bill} , the tip was ${tip} , and the total value ${bill + tip} `)
